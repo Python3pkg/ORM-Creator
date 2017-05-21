@@ -33,7 +33,7 @@ class OrmCreator(object):
         mdata = MetaData()
         mdata.reflect(self.sqla_engine)
         if self.tables == '*':
-            tables_list = mdata.tables.keys()
+            tables_list = list(mdata.tables.keys())
         else:
             tables_list = self.tables
 

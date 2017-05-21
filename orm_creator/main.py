@@ -1,5 +1,5 @@
 from argparse import ArgumentParser as ap
-from ormCreator import OrmCreator
+from .ormCreator import OrmCreator
 import sys
 import getpass
 
@@ -40,16 +40,16 @@ def arg_parser():
     args = parser.parse_args()
 
     if args.uname is None:
-        print "Please enter"\
-            " your MySql username"
+        print("Please enter"\
+            " your MySql username")
         sys.exit(0)
     elif args.db is None:
-        print "Please enter"\
-            " the required database name"
+        print("Please enter"\
+            " the required database name")
         sys.exit(0)
     elif args.host is None:
-        print "Please enter in the "\
-            " MySql host"
+        print("Please enter in the "\
+            " MySql host")
         sys.exit(0)
     else:
         values = {}
